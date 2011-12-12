@@ -1,0 +1,8 @@
+Plasmid is a working proof of concept CMS. I allows you to clone and edit in the browser any web page.
+
+http://vimeo.com/33513600
+
+Author: Massimo Di Pierro
+License: BSD
+Requires: web2py
+Includes: jquery, jeditor, nicedit
