@@ -1,0 +1,9 @@
+{{response.files.append(URL('static','js/nicEdit.js'))}}
+{{extend 'layout.html'}}
+
+<script>
+var textarea = jQuery('<textarea/>');
+alert(textarea.html());
+document.write('<textarea></textarea>');
+// jQuery(function(){new nicEditor().panelInstance('test');});
+</script>

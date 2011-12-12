@@ -1,0 +1,19 @@
+{{response.files.append(URL('static','js/nicEdit.js'))}}
+{{extend 'layout.html'}}
+
+<script>
+function addf() {
+   var editor  = new nicEditor();
+   try{editor.removeInstance('test');}catch(e){};
+   jQuery('#here').prepend('<textarea id="test">hello world</textarea>');
+   jQuery(function(){editor.panelInstance('test');});
+}
+</script>
+
+<div id="here"></div>
+
+<button onclick="addf()">click me</button>
+
+<script>
+
+</script>

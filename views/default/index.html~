@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+
+<h4>1. Insert the URL of a web page that you want to edit</h4>
+<h4>2. In the next page double click on text to edit, then [next] on topbar when done</h4>
+
+{{=form}}
+
+<h4>Pages you created</h4>
+
+<table>
+  {{for clone in clones:}}
+  <tr>
+    <td>
+      {{=clone.url}}
+    </td>
+    <td>&gt;</td>
+    <td>
+      {{url = URL('page',args=clone.id,scheme=True,host=True)}}
+      {{=A(url,_href=url)}}
+    </td>
+    <td>&gt;</td>
+    <td>
+      [{{=A('delete',_href=URL('delete',args=clone.id))}}]
+      [{{=A('clone',_href=URL('edit',vars=dict(url=url)))}}]
+    </td>
+  </tr>
+  {{pass}}
+</table>
