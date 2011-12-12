@@ -1,7 +1,0 @@
-{{extend 'plugin_cms/layout_lite.html'}}
-
-{{=A('Back',_href=URL('folder',args=request.args(0)),_class="button")}}
-
-<h3>Edit/Create Folder</h3>
-
-{{=form}}
